@@ -1,4 +1,9 @@
-const h1 = document.createElement("h1").content
-h1.innerText = "Hola Mundo"
+const div = document.querySelector("div")
+const h1 = document.querySelector("h1")
 
-console.log("estoy funcionando")
+const pintarH1 = () =>{
+    const clone = div.cloneNode(true)
+    clone.querySelector("h1").textContent = " Cambiado desde JS"
+    div.appendChild(clone)
+} 
+pintarH1()
